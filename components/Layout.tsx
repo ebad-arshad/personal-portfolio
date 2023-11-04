@@ -7,7 +7,7 @@ interface Props {
 
 const Layout: FC<Props> = ({ children, className }) => {
     return (
-        <div className={`px-4 md:container mx-auto md:px-10 ${className}`}>{children}</div>
+        <div className={`px-20 md:container mx-auto md:px-10 ${className}`}>{children}</div>
     )
 }
 

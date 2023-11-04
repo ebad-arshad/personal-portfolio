@@ -17,12 +17,23 @@
   padding: 0;
   box-sizing: border-box;
   font-size: Ubuntu-Bold;
+  /* user-select: none; */
 }
 
 .transitions {
-  @apply transition duration-300
+  transition: 0.3s ease-in-out;
 }
 
 body {
   position: relative;
+  height: 200vh;
+}
+
+.box>div:nth-child(2) {
+  @apply transitions;
+}
+
+.box:hover>div:nth-child(2) {
+  transform: translateX(10px);
+  @apply transitions;
 }
