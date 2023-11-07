@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      {/* <Skills /> */}
-      {/* <Projects /> */}
-      {/* <Email /> */}
-      {/* <Footer /> */}
+      <Skills />
+      <Projects />
+      <Email />
+      <Footer />
     </>
   )
 }

@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: Ubuntu;
@@ -10,6 +13,10 @@
 @font-face {
   font-family: Ubuntu-Bold;
   src: url('../assets/fonts/Ubuntu-Bold.ttf');
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -30,10 +37,20 @@ body {
 }
 
 .box>div:nth-child(2) {
-  @apply transitions;
+  transition: 0.3s ease-in-out;
 }
 
 .box:hover>div:nth-child(2) {
   transform: translateX(10px);
-  @apply transitions;
+  transition: 0.3s ease-in-out;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.before::before {
+  transition: 0.3s ease-in-out;
 }

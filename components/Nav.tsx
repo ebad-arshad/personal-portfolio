@@ -11,6 +11,7 @@ import Button from './Button'
 import styles from './module.css/Nav.module.css'
 import { AnimatePresence, motion } from "framer-motion"
 import { navItems } from '@/contants'
+import Link from 'next/link';
 
 const Nav = () => {
 
@@ -42,72 +43,71 @@ const Nav = () => {
                     >
                         <ul className='font-light tracking-wider text-lg flex flex-col items-center gap-1 w-full'>
                             {navItems.map((v, i) => (
-                                <li key={i} className='text-gray-300 hover:text-white font-normal cursor-pointer w-full py-2 text-center'>{v}</li>
+                                <a onClick={() => setToggleNav(false)} key={i} href={v.url}> <li className='text-gray-300 hover:text-white font-normal cursor-pointer w-full py-2 text-center'>{v.name}</li></a>
                             ))}
                         </ul>
                         <div className='flex gap-2'>
                             <span
-                                className={`${styles.active, styles.before} relative cursor-pointer border p-3 text-xl flex rounded-full
+                                className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
                                 transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                              bg-[#262626] hover:bg-opacity-0 text-white`}
-                            ><FiGithub /></span>
+                            ><Link onClick={() => setToggleNav(false)} target='_blank' href='https://github.com/ebad-arshad'><FiGithub /></Link></span>
                             <span
-                                className={`${styles.active, styles.before} relative cursor-pointer border p-3 text-xl flex rounded-full
+                                className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
                                 transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                                 bg-[#262626] hover:bg-opacity-0 text-white`}
-                            ><FaLinkedinIn /></span>
+                            ><Link onClick={() => setToggleNav(false)} target='_blank' href='https://www.linkedin.com/in/ebad-arshad/'><FaLinkedinIn /></Link></span>
                         </div>
                         <Button
-                            className={`${styles.before} relative transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-white hover:text-black hover:before:w-full`}
+                            className={`before relative z-0 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-white hover:text-black hover:before:w-full`}
                         >
-                            Let{"'"}s Connect
+                            <a href='#email' onClick={() => setToggleNav(false)}>Let{"'"}s Connect</a>
                         </Button>
                     </motion.div>
                 }
             </AnimatePresence>
-            <div className={`z-10 fixed left-1/2 -translate-x-1/2 top-0 w-full ${colorChange && 'bg-black'} transitions`}>
-                <Layout>
-                    <nav
-                        className={`flex items-center ${colorChange ? 'py-3' : 'py-6'} transitions`}
-                    >
-                        <Image
-                            src={logo}
-                            className='w-[100px] cursor-pointer'
-                            alt='logo'
-                            priority
-                        />
-                        <div
-                            className='flex-1 flex justify-end items-center'
-                        >
-                            <div className='md:flex hidden flex-1 justify-end items-center gap-4 md:gap-8'>
-                                <ul className='font-light tracking-wider  flex flex-col md:flex-row items-center pt-4 md:pt-0 gap-6 lg:gap-12'>
-                                    {navItems.map((v, i) => (
-                                        <li key={i} className='text-gray-300 font-normal hover:text-white cursor-pointer w-full md:w-fit py-2 text-center'>{v}</li>
-                                    ))}
-                                </ul>
-                                <div className='flex gap-2'>
-                                    <span
-                                        className={`${styles.active, styles.before} relative cursor-pointer border p-3 text-xl flex rounded-full
+            <Layout
+                parentClassName={`z-10 fixed left-1/2 -translate-x-1/2 top-0 w-full backdrop-blur-sm ${colorChange && 'bg-black/70'} transitions`}
+                className={`flex items-center ${colorChange ? 'py-3' : 'py-6'} transitions`}
+            >
+                <Image
+                    src={logo}
+                    className='w-[100px] cursor-pointer'
+                    alt='logo'
+                    priority
+                />
+                <div
+                    className='flex-1 flex justify-end items-center'
+                >
+                    <div className='md:flex hidden flex-1 justify-end items-center gap-4 md:gap-8'>
+                        <ul className='font-light tracking-wider flex flex-col md:flex-row items-center pt-4 md:pt-0 gap-6 lg:gap-12'>
+                            {navItems.map((v, i) => (
+                                <a key={i} href={v.url}><li className='text-gray-300 font-normal hover:text-white cursor-pointer w-full md:w-fit py-2 text-center'>{v.name}</li></a>
+                            ))}
+                        </ul>
+                        <div className='flex gap-2'>
+                            <Link target='_blank' href='https://github.com/ebad-arshad'>
+                                <span
+                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
                             transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                             bg-[#262626] hover:bg-opacity-0 text-white`}
-                                    ><FiGithub /></span>
-                                    <span
-                                        className={`${styles.active, styles.before} relative cursor-pointer border p-3 text-xl flex rounded-full
+                                ><FiGithub /></span></Link>
+                            <Link target='_blank' href='https://www.linkedin.com/in/ebad-arshad/'>
+                                <span
+                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
                             transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                             bg-[#262626] hover:bg-opacity-0 text-white`}
-                                    ><FaLinkedinIn /></span>
-                                </div>
-                                <Button
-                                    className={`${styles.before} relative transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-white hover:text-black hover:before:w-full`}
-                                >
-                                    Let{"'"}s Connect
-                                </Button>
-                            </div>
-                            <RxHamburgerMenu onClick={() => setToggleNav(e => !e)} className='block md:hidden text-3xl cursor-pointer' />
+                                ><FaLinkedinIn /></span></Link>
                         </div>
-                    </nav>
-                </Layout >
-            </div>
+                        <Button
+                            className={`before relative z-0 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-white hover:text-black hover:before:w-full`}
+                        >
+                            <a href="#email">Let{"'"}s Connect</a>
+                        </Button>
+                    </div>
+                    <RxHamburgerMenu onClick={() => setToggleNav(e => !e)} className='block md:hidden text-3xl cursor-pointer' />
+                </div>
+            </Layout >
         </>
     )
 }

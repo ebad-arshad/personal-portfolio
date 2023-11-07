@@ -1,13 +1,14 @@
 import { FC } from 'react'
 
 interface Props {
-    children: string[];
+    children: any;
     className?: string;
+    type?: "button" | "submit" | "reset" | undefined;
 }
 
-const Button: FC<Props> = ({ children, className }) => {
+const Button: FC<Props> = ({ children, className, type }) => {
     return (
-        <button className={`${className} border font-bold py-4 px-6`}>{children}</button>
+        <button type={type} className={`${className} border font-bold py-4 px-6`}>{children}</button>
     )
 }
 
