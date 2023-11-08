@@ -4,7 +4,6 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Email from "@/components/Email";
 import Footer from "@/components/Footer";
-import 'dotenv/config'
 
 export default function Home() {
   return (
