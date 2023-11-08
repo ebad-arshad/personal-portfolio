@@ -37,7 +37,7 @@ const Email = () => {
           </div>
           <Button
             type='submit'
-            className={`before relative z-0 w-full xl:w-fit bg-white border-none text-black px-14 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-black hover:text-white hover:before:w-full`}
+            className={`before relative z-0 w-full xl:w-fit bg-white border-none text-black xl:px-14 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-black hover:text-white hover:before:w-full`}
           >
             Send
           </Button>
@@ -49,7 +49,7 @@ const Email = () => {
         <span className='md:flex-[.65] bg-gradient-to-r from-[#aa367c] to-[#4a2fbd] flex rounded-2xl overflow-hidden'>
           <form className='flex bg-white m-[1px] w-full h-full rounded-2xl overflow-hidden'>
             <input required className='bg-transparent w-[70%] placeholder:text-gray-500 border-none outline-none p-5' type="text" placeholder='Email Address' />
-            <Button type='submit' className='border-none w-[30%] flex justify-center bg-gradient-to-r from-[#aa367c] to-[#4a2fbd] text-white m-1 rounded-2xl px-4 md:px-14'>Submit</Button>
+            <Button type='submit' className='border-none w-[30%] flex justify-center bg-gradient-to-r from-[#aa367c] to-[#4a2fbd] text-white m-1 rounded-2xl px-4 md:px-16'>Submit</Button>
           </form>
         </span>
       </div>

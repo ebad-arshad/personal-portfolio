@@ -28,9 +28,11 @@ const Hero = () => {
           />
           </div>
           <div className='text-gray-300 tracking-wide text-sm md:text-base'>A passionate Front End Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.</div>
-          <a href='#email' className='font-bold text-lg tracking-wide flex gap-2 items-center box cursor-pointer'>
-            <div>Let{"'"}s Connect</div>
-            <div className='text-2xl'><BsArrowRightCircle /></div>
+          <a href='#email'>
+            <button className='p-3 font-bold text-lg tracking-wide flex gap-2 items-center box cursor-pointer'>
+              <div>Let{"'"}s Connect</div>
+              <div className='text-2xl'><BsArrowRightCircle /></div>
+            </button>
           </a>
         </div>
         <motion.div

@@ -16,6 +16,10 @@ const Tabs = () => {
         setState(e => !e);
     }, [activeBtn])
 
+    useEffect(() => {
+        setState(e => true);
+    }, [])
+
     const tabClick = (i: number) => {
         setActiveBtn(e => i);
         setTimeout(() => {

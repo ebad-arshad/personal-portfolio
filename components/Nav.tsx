@@ -47,21 +47,25 @@ const Nav = () => {
                             ))}
                         </ul>
                         <div className='flex gap-2'>
-                            <span
-                                className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
+                            <Link onClick={() => setToggleNav(false)} target='_blank' href='https://github.com/ebad-arshad'>
+                                <span
+                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
                                 transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                              bg-[#262626] hover:bg-opacity-0 text-white`}
-                            ><Link onClick={() => setToggleNav(false)} target='_blank' href='https://github.com/ebad-arshad'><FiGithub /></Link></span>
-                            <span
-                                className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
+                                ><FiGithub /></span></Link>
+                            <Link onClick={() => setToggleNav(false)} target='_blank' href='https://www.linkedin.com/in/ebad-arshad/'>
+                                <span
+                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
                                 transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                                 bg-[#262626] hover:bg-opacity-0 text-white`}
-                            ><Link onClick={() => setToggleNav(false)} target='_blank' href='https://www.linkedin.com/in/ebad-arshad/'><FaLinkedinIn /></Link></span>
+                                ><FaLinkedinIn /></span></Link>
                         </div>
                         <Button
                             className={`before relative z-0 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-white hover:text-black hover:before:w-full`}
+                            href='#email'
+                            handleClick={() => setToggleNav(false)}
                         >
-                            <a href='#email' onClick={() => setToggleNav(false)}>Let{"'"}s Connect</a>
+                            Let{"'"}s Connect
                         </Button>
                     </motion.div>
                 }
@@ -101,8 +105,9 @@ const Nav = () => {
                         </div>
                         <Button
                             className={`before relative z-0 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-white hover:text-black hover:before:w-full`}
+                            href='#email'
                         >
-                            <a href="#email">Let{"'"}s Connect</a>
+                            Let{"'"}s Connect
                         </Button>
                     </div>
                     <RxHamburgerMenu onClick={() => setToggleNav(e => !e)} className='block md:hidden text-3xl cursor-pointer' />
