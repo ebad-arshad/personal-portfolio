@@ -32,7 +32,7 @@ const Footer = () => {
                                 bg-[#262626] hover:bg-opacity-0 text-white`}
             ><FaLinkedinIn /></span></Link>
         </div>
-        <p className='text-center text-sm text-gray-400 tracking-wide'>Copyright 2022. All Rights Reserved</p>
+        <p className='text-center text-sm text-gray-400 tracking-wide'>Copyright 2023. All Rights Reserved</p>
       </div>
     </Layout>
   )

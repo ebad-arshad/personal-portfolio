@@ -40,7 +40,7 @@ const Skills = () => {
       <div className='bg-[#151515] rounded-[70px] drop-shadow-lg flex flex-col items-center p-14 gap-4 -translate-y-14'>
         <h1 className='font-bold text-4xl'>Skills</h1>
         <p className='text-[#b8b8b8] tracking-wider text-center'>
-          CRAZY FRONT END DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
+          Crazy front end developer who wants to explore every tech stack.
         </p>
         <div className='w-full flex flex-wrap gap-5 text-[#858d95] justify-center mt-10'>
           {skills.map((skill, i) => (
