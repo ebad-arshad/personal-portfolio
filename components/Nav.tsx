@@ -2,16 +2,14 @@
 
 import React, { useState } from 'react'
 import Layout from './Layout'
-import Image from 'next/image'
-import logo from '@/assets/images/logo.svg'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { FiGithub } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa'
 import Button from './Button'
-import styles from './module.css/Nav.module.css'
 import { AnimatePresence, motion } from "framer-motion"
 import { navItems } from '@/contants'
 import Link from 'next/link';
+import Logo from './Logo';
 
 const Nav = () => {
 
@@ -49,13 +47,13 @@ const Nav = () => {
                         <div className='flex gap-2'>
                             <Link onClick={() => setToggleNav(false)} target='_blank' href='https://github.com/ebad-arshad'>
                                 <span
-                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
+                                    className={`before relative cursor-pointer border p-3 text-xl flex rounded-full
                                 transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                              bg-[#262626] hover:bg-opacity-0 text-white`}
                                 ><FiGithub /></span></Link>
                             <Link onClick={() => setToggleNav(false)} target='_blank' href='https://www.linkedin.com/in/ebad-arshad/'>
                                 <span
-                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
+                                    className={`before relative cursor-pointer border p-3 text-xl flex rounded-full
                                 transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                                 bg-[#262626] hover:bg-opacity-0 text-white`}
                                 ><FaLinkedinIn /></span></Link>
@@ -74,12 +72,7 @@ const Nav = () => {
                 parentClassName={`z-10 fixed left-1/2 -translate-x-1/2 top-0 w-full backdrop-blur-sm ${colorChange && 'bg-black/70'} transitions`}
                 className={`flex items-center ${colorChange ? 'py-3' : 'py-6'} transitions`}
             >
-                <Image
-                    src={logo}
-                    className='w-[100px] cursor-pointer'
-                    alt='logo'
-                    priority
-                />
+                <Logo />
                 <div
                     className='flex-1 flex justify-end items-center'
                 >
@@ -92,13 +85,13 @@ const Nav = () => {
                         <div className='flex gap-2'>
                             <Link target='_blank' href='https://github.com/ebad-arshad'>
                                 <span
-                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
+                                    className={`before relative cursor-pointer border p-3 text-xl flex rounded-full
                             transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                             bg-[#262626] hover:bg-opacity-0 text-white`}
                                 ><FiGithub /></span></Link>
                             <Link target='_blank' href='https://www.linkedin.com/in/ebad-arshad/'>
                                 <span
-                                    className={`${styles.active} before relative cursor-pointer border p-3 text-xl flex rounded-full
+                                    className={`before relative cursor-pointer border p-3 text-xl flex rounded-full
                             transitions before:-z-10 before:absolute before:content-[""] before:w-full before:scale-0 before:h-full before:bg-white hover:text-black hover:before:w-full before:top-0 before:left-0 overflow-hidden hover:before:scale-100 before:rounded-full
                             bg-[#262626] hover:bg-opacity-0 text-white`}
                                 ><FaLinkedinIn /></span></Link>

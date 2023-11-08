@@ -15,6 +15,10 @@ interface Props {
 const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en">
+      <head>
+        <link sizes="any" rel="icon" type="image/png" href="icon.png" />
+        <title>Ebad`s Portfolio</title>
+      </head>
       <body>
         <ThemeProvider
           attribute="class"

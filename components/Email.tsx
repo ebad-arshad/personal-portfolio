@@ -25,6 +25,7 @@ const Email = () => {
     }
     try {
       const res = await SendEmail(formData);
+      setFormData({ fName: '', lName: '', email: '', phoneNumber: '', message: '', });
       if (res.status === 200) successNotify();
       return;
     } catch (error) {
@@ -81,7 +82,6 @@ const Email = () => {
             alt='avatar'
           />
         </div>
-        {/* ================================================= */}
         <form onSubmit={handleSubmit} className=' flex-1 flex flex-col gap-5'>
           <p className='text-4xl font-bold'>Get In Touch</p>
           <div className='flex flex-col gap-2'>

@@ -2,10 +2,9 @@ import React from 'react'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
 import Layout from './Layout'
-import logo from '@/assets/images/logo.svg'
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './module.css/Footer.module.css'
+import Logo from './Logo'
 
 const Footer = () => {
   return (
@@ -14,7 +13,7 @@ const Footer = () => {
       className='pt-52 py-20 flex flex-col md:flex-row items-center md:items-end justify-between'>
       <div className='hidden md:block'>
         <a href="#">
-        <Image src={logo} alt='logo' />
+          <Logo />
         </a>
       </div>
       <div className='flex flex-col gap-5 items-center md:items-end'>
