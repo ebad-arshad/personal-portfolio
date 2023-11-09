@@ -31,15 +31,15 @@ const Skills = () => {
 
   return (
     <Layout
-      parentClassName={`bg-[#151515] relative z-0 `}
+      parentClassName={`bg-[#151515] relative z-0`}
       id='skills'
     >
       <Image src={blob} alt='blob'
         className='absolute top-32 -left-14 -z-10'
       />
-      <div className='bg-[#151515] rounded-[70px] drop-shadow-lg flex flex-col items-center p-14 gap-4 -translate-y-14'>
-        <h1 className='font-bold text-4xl'>Skills</h1>
-        <p className='text-[#b8b8b8] tracking-wider text-center'>
+      <div className='bg-[#151515] rounded-[70px] drop-shadow-lg flex flex-col items-center py-14 px-4 sm:p-14 gap-4 -translate-y-14'>
+        <h1 className='font-bold text-2xl md:text-4xl'>Skills</h1>
+        <p className='text-[#b8b8b8] tracking-wider text-md text-center'>
           Crazy front end developer who wants to explore every tech stack.
         </p>
         <div className='w-full flex flex-wrap gap-5 text-[#858d95] justify-center mt-10'>

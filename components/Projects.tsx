@@ -10,10 +10,10 @@ const Projects = () => {
       className='py-14 flex flex-col gap-4 items-center h-full'
     >
       <h1
-        className='text-4xl font-bold text-center'
+        className='text-2xl sm:text-4xl font-bold text-center'
       >Projects</h1>
       <p
-        className='text-[#858d95] tracking-wide text-center w-full lg:w-1/2'
+        className='text-[#858d95] tracking-wide text-center text-md w-full lg:w-1/2'
       >
         Some of my projects that took time and done with lot of fun, precision and plan.
       </p>

@@ -82,8 +82,8 @@ const Email = () => {
             alt='avatar'
           />
         </div>
-        <form onSubmit={handleSubmit} className=' flex-1 flex flex-col gap-5'>
-          <p className='text-4xl font-bold'>Get In Touch</p>
+        <form onSubmit={handleSubmit} className='flex w-full flex-col gap-5'>
+          <p className='text-2xl sm:text-4xl text-center font-bold'>Get In Touch</p>
           <div className='flex flex-col gap-2'>
             <div className='flex flex-col lg:flex-row gap-2'>
               <input onChange={(e) => setFormData(v => { return { ...v, fName: e.target.value } })} value={formData.fName} required className='lg:flex-1 transitions bg-white/20 border outline-none focus:bg-white focus:placeholder:text-gray-500 focus:text-black border-gray-400 rounded-2xl px-6 py-4 placeholder:text-gray-100' placeholder='First Name' type="text" />
@@ -99,7 +99,7 @@ const Email = () => {
           </div>
           <Button
             type='submit'
-            className={`before relative z-0 w-full xl:w-fit bg-white border-none text-black xl:px-14 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-black hover:text-white hover:before:w-full`}
+            className={`before relative z-0 w-full  bg-white border-none text-black xl:px-14 transitions before:-z-10 before:absolute before:left-0 before:top-0 before:content-[""] before:w-0 before:h-full before:bg-black hover:text-white hover:before:w-full`}
           >
             Send
           </Button>
