@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './module.css/Tabs.module.css'
 import TabItem from './TabItem';
 import { AnimatePresence, motion } from 'framer-motion'
-import { projects } from '@/contants'
+import { projects } from '@/constants'
 
 const Tabs = () => {
 
@@ -32,7 +32,7 @@ const Tabs = () => {
             <div
                 className='font-bold flex gap-2 p-2 rounded-xl bg-[#1a1a1a]/70'
             >
-                {['Tab 1', 'Tab 2', 'Tab 3'].map((v: string, i: number) =>
+                {['Tab 1', 'Tab 2'].map((v: string, i: number) =>
                     <button key={i} onClick={() => activeBtn === i ? null : tabClick(i)} className={`${styles.tab} ${activeBtn === i ? styles.scaled : 'hover:bg-opacity-50 bg-[#1a1a1a]'} relative z-0 shadow-lg py-2 px-4 md:px-10 lg:px-16 rounded-xl transitions text-sm`}>{v}</button>
                 )}
             </div>

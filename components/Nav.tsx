@@ -7,7 +7,7 @@ import { FiGithub } from 'react-icons/fi'
 import { FaLinkedinIn } from 'react-icons/fa'
 import Button from './Button'
 import { AnimatePresence, motion } from "framer-motion"
-import { navItems } from '@/contants'
+import { navItems } from '@/constants'
 import Link from 'next/link';
 import Logo from './Logo';
 
