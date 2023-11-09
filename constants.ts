@@ -40,7 +40,7 @@ export const projects = [
         image: 'https://e1.pxfuel.com/desktop-wallpaper/526/1000/desktop-wallpaper-roronoa-zoro-wano-zoro-wano.jpg',
         label: 'Best project',
         github: 'https://github.com/ebad-arshad/ecommerce_store',
-        url: 'ebad-ecommerce-store.vercel.app',
+        url: 'ebad-ecommerce-store.vercel.app/',
     },
     {
         id: 4,
