@@ -4,6 +4,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Email from "@/components/Email";
 import Footer from "@/components/Footer";
+import CV from "@/components/CV";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Email />
       <Footer />
+      <CV />
     </>
   )
 }

@@ -5,6 +5,7 @@ import styles from './module.css/Tabs.module.css'
 import TabItem from './TabItem';
 import { AnimatePresence, motion } from 'framer-motion'
 import { projects } from '@/constants'
+import { StaticImageData } from 'next/image';
 
 const Tabs = () => {
 
@@ -21,9 +22,9 @@ const Tabs = () => {
     }, [])
 
     const tabClick = (i: number) => {
-        setActiveBtn(e => i);
+        setState(e => !e);
         setTimeout(() => {
-            setState(e => !e);
+            setActiveBtn(e => i);
         }, 300);
     }
 
@@ -40,19 +41,18 @@ const Tabs = () => {
                 {state &&
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, transition: { type: 'spring' } }}
+                        animate={{ opacity: 1, transition: { duration: .3, type: 'spring' } }}
                         exit={{ opacity: 0 }}
                         className='w-full flex gap-[10px] flex-wrap !overflow-hidden'>
                         {
                             currentArr.map(({ id, github, image, label, url }: {
                                 id: number;
-                                image: string;
+                                image: StaticImageData;
                                 label: string;
                                 github: string;
                                 url: string;
                             }) => (<TabItem
                                 key={id}
-                                id={id}
                                 image={image}
                                 label={label}
                                 github={github}

@@ -72,10 +72,10 @@ const Email = () => {
     <>
       <Layout
         parentClassName='bg-gradient-to-r from-[#aa367c] to-[#4a2fbd]'
-        className='flex py-14'
+        className='flex py-14 relative'
         id='email'
       >
-        <div className='items-center hidden xl:flex flex-1'>
+        <div className='xl:flex items-center hidden w-full'>
           <Image
             src={emailAvatar}
             className='w-full xl:w-[85%]'
